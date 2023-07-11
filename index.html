@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description"  content="Me chamo Mattheus, sou desenvolvedor Front-End e UX/UI Deisgner.">
         <meta name="author" content="mattheus" />
-        <title>MP | Portfolio</title>
+        <link rel="shortcut icon" href="imgs/favicon-white.ico" type="image/x-icon"> 
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="imgs/favicon - white.ico"/>
+        <title>MP | Portfolio</title>
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
         <!-- Google fonts-->
@@ -15,44 +15,35 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-    <body>
-    <!-- 
-        <nav class="navbar navbar-light bg-light static-top">
-            <div class="container">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
-                <a class="btn btn-primary" href="#signup">Sign Up</a>
+    <body id="body">
+           <div class="header" id="header">
+        <button onclick="toggleSidebar()" class="btn_icon_header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button> <!-- header -->
+    
+            <div class="logo_header">
+                <img src="imgs/logo-gradiente-verde.png" alt="logo-mattheus">
+            </div> <!-- logo-header -->
+    
+            <div class="navigation_header" id="navigation_header">
+                <button onclick="toggleSidebar()" class="btn_icon_header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </button>
+                <a href="#Inicio" class="active">Inicio</a>
+                <a href="#Sobre">Sobre</a>
+                <a href="#Habilidades">Habilidades</a>
+                <a href="#Projetos">Projetos</a>
+                <a href="https://beacons.ai/mattheuspereira" target="_blank">Contato</a>
+                <a href="#Feedbacks">Feedbacks</a>
             </div>
-        </nav>
-        <header class="masthead">
-            <div class="container position-relative">
-                <div class="row justify-content-center">
-                    <div class="col-xl-6">
-                        <div class="text-center text-white">
-                            <h1 class="mb-5">Generate more leads with a professional landing page!</h1>
-                            <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">>
-                                <div class="row">
-                                    <div class="col">
-                                        <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
-                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
-                                    </div>
-                                    <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
-                                </div>
-                                <div class="d-none" id="submitSuccessMessage"> 
-                                    <div class="text-center mb-3">
-                                        <div class="fw-bolder">Form submission successful!</div>
-                                        <p>To activate this form, sign up at</p>
-                                        <a class="text-white" href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                    </div>
-                                </div>
-                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        Icons Grid -->
+        </div>
+        <div tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+
+
         <section class="features-icons bg-light text-center">
             <div class="container">
                 <div class="row">
@@ -86,14 +77,14 @@
                 <div class="row g-0">
                     <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('imgs/minha-foto-com-bg.png')"></div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                        <h2 id="sobre" class="destaque-text">Sobre mim</h2> <!-- Sobre Mim -->
+                        <h2 id="Sobre" class="destaque-text">Sobre mim</h2> <!-- Sobre Mim -->
                         <p class="lead mb-0">Me chamo Mattheus, sou estudante de informática e atualmente trabalho como desenvolvedor e UI/UX designer freelacer.</p> <!-- Sobre mim  -->
                     </div>
                 </div>
                 <div class="row g-0">
                     <div class="col-lg-6 text-white showcase-img" style="background-image: url('imgs/conhecimentos-habilidades.png')"></div>
                     <div class="col-lg-6 my-auto showcase-text">
-                        <h2 id="habilidades" class="destaque-text">Habilidades</h2> <!-- Conhecimentos -->
+                        <h2 id="Habilidades" class="destaque-text">Habilidades</h2> <!-- Conhecimentos -->
                         </br>
                         <p class="lead mb-0">Possuo experiência em <strong>HTML, CSS, JavaScript, Boostrap.</strong>
                                 </br>
@@ -102,17 +93,18 @@
                         </p>
                     </div>
                 </div>
+                <!-- ID PROJETOS -->
                 <div class="row g-0">
                     <div class="col-lg-6 order-lg-2 text-wite showcase-img" style="background-image: url('imgs/SETA-ABAIXO.png')"></div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                        <h2 id="projetos" class="destaque-text">Projeto realizados</h2> <!-- Projeto realiazdos -->
+                        <h2 id="Projetos" class="destaque-text">Projeto realizados</h2> <!-- Projeto realiazdos -->
                         </br>
                         <h2 class="texto-ligher">Confira meus principais projetos realizados, e as linguagens utilizadas.</h2>
                         <p class="lead mb-0"></p>
                     </div>
                 </div>
                 <div class="row g-0">
-                    <div class="col-lg-6 text-white showcase-img" style="background-image: url('imgs/SITE-DE-FILMES.png')"></div>
+                    <div class="col-lg-6 text-white showcase-img" style="background-image: url('imgs/fotos-feed/1.png')"></div>
                     <div class="col-lg-6 my-auto showcase-text">
                         <h2 class="destaque-text">Projeto 1</h2> <!-- Projeto 1 -->
                         </br>
@@ -124,7 +116,7 @@
                     </div>
                 </div>
                 <div class="row g-0">
-                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('imgs/clone-spotify-resultado-2.png')"></div>
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('imgs/fotos-feed/2.png')"></div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                         <h2 class="destaque-text">Projeto 2</h2> <!-- Projeto 2 -->
                         </br>
@@ -136,7 +128,7 @@
                     </div>
                 </div>
                 <div class="row g-0">
-                    <div class="col-lg-6 text-white showcase-img" style="background-image: url('imgs/relogio-dinamico-resultado.png')"></div>
+                    <div class="col-lg-6 text-white showcase-img" style="background-image: url('imgs/fotos-feed/3.png')"></div>
                     <div class="col-lg-6 my-auto showcase-text">
                         <h2 class="destaque-text">Projeto 3</h2> <!-- Projeto 3 -->
                         </br>
@@ -164,7 +156,7 @@
                         <h2 class="destaque-text">Página no Instagram</h2> <!-- Projeto 3 -->
                         </br>
                         <h2 class="texto-ligher">@mattheus_dev</h2> <!-- Relógio Digital online -->
-                        <p class="lead mb-0">Na página eu abordo sobre diversos conteúdos relacionados a tecnologia. Como tendências de tecnologia e dicas para progamação</p>
+                        <p class="lead mb-0">Lá eu abordo sobre diversos conteúdos relacionados a tecnologia. Como tendências e dicas de progamação.</p>
                         </br>
                         <h6 class="texto-resultado"><a href="https://www.instagram.com/mattheusp_dev/">Acesse a página
                         </a></h6>
@@ -176,27 +168,28 @@
         <!-- Testimonials-->
         <section class="testimonials text-center bg-light">
             <div class="container">
-                <h2 id="feedback" class="mb-5">Feedback de clientes</h2>
+                <!-- Feedbacks -->
+                <h2 id="Feedbacks" class="mb-5">Feedback de clientes</h2>
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                             <img class="img-fluid rounded-circle mb-3" src="imgs/sem-foto.png" alt="..." /> <!-- Foto cliente 1 -->
                             <h5>Geovanna Matos</h5>
-                            <p class="font-weight-light mb-0">Parabéns pelo excelente trabalho! A página que você criou superou minhas expectativas.</p>
+                            <p class="font-weight-light mb-0">"Parabéns pelo excelente trabalho! A página que você criou superou minhas expectativas."</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                             <img class="img-fluid rounded-circle mb-3" src="imgs/sem-foto.png" alt="..." /> <!-- Foto cliente 2 -->
                             <h5>Carolinna Sobral</h5> 
-                            <p class="font-weight-light mb-0">Gostei muito do resultado da Landing page!</p>
+                            <p class="font-weight-light mb-0">"Gostei muito do resultado da Landing page!"</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                             <img class="img-fluid rounded-circle mb-3" src="imgs/sem-foto.png" alt="..." /> <!-- Foto cliente 3 -->
                             <h5>Danilo silva</h5>
-                            <p class="font-weight-light mb-0">Show de bola! Recomendarei seus serviços a outras pessoas.</p>
+                            <p class="font-weight-light mb-0">"Show de bola! Irei recomendar seus serviços a outras pessoas!"</p>
                         </div>
                     </div>
                 </div>
@@ -209,13 +202,13 @@
                 <div class="row">
                     <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
                         <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><a href="#!">Inicio</a></li>
+                            <li class="list-inline-item"><a href="#Inicio">Inicio</a></li>
                             <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Sobre</a></li>
+                            <li class="list-inline-item"><a href="#Sobre">Sobre</a></li>
                             <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Projetos</a></li>
+                            <li class="list-inline-item"><a href="#Projetos">Projetos</a></li>
                             <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Contato</a></li>
+                            <li class="list-inline-item"><a href="https://beacons.ai/mattheuspereira">Contato</a></li>
                         </ul>
                         <p class="text-muted small mb-4 mb-lg-0">&copy; Mattheup 2023. Todos os direitos reservados.</p>
                     </div>
@@ -235,14 +228,7 @@
                 </div>
             </div>
         </footer>
-        <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
+    <script src="scripts.js"></script>
 </html>
