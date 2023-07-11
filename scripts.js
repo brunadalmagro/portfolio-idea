@@ -1,38 +1,17 @@
-var header           = document.getElementById('header');
-var navigationHeader = document.getElementById('navigation_header');
-var content          = document.getElementById('content');
-var showSidebar      = false;
+const btnMobile = document.getElementById('btn-mobile');
 
-function toggleSidebar()
-{
-    showSidebar = !showSidebar;
-    if(showSidebar)
-    {
-        navigationHeader.style.marginLeft = '-10vw';
-        navigationHeader.style.animationName = 'showSidebar';
-        content.style.filter = 'blur(2px)';
-    }
-    else
-    {
-        navigationHeader.style.marginLeft = '-100vw';
-        navigationHeader.style.animationName = '';
-        content.style.filter = '';
-    }
+function toggleMenu(event) {
+  if (event.type === 'touchstart') event.preventDefault();
+  const nav = document.getElementById('nav');
+  nav.classList.toggle('active');
+  const active = nav.classList.contains('active');
+  event.currentTarget.setAttribute('aria-expanded', active);
+  if (active) {
+    event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+  } else {
+    event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+  }
 }
 
-function closeSidebar()
-{
-    if(showSidebar)
-    {
-        showSidebar = true;
-        toggleSidebar();
-    }
-}
-
-window.addEventListener('resize', function(event) {
-    if(window.innerWidth > 768 && showSidebar) 
-    {  
-        showSidebar = true;
-        toggleSidebar();
-    }
-});
+btnMobile.addEventListener('click', toggleMenu);
+btnMobile.addEventListener('touchstart', toggleMenu);
