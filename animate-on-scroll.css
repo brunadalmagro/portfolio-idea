@@ -1,0 +1,37 @@
+.animate {
+    opacity: 0;
+    filter: blur(2px);
+    transition: all 1.2s;
+  }
+  .animate.from-top {
+    transform: translateY(-150%);
+  }
+  .animate.from-left {
+    transform: translateX(-100%);
+  }
+  .animate.from-right {
+    transform: translateX(100%);
+  }
+  
+  .animate.show {
+    filter: blur(0);
+    transform: translate(0);
+    opacity: 1;
+  }
+
+
+
+
+/* 
+
+.animate, .col-lg-4, .destaque-text, 
+.texto-ligher, .texto-resultado, .mb-5, p {
+  opacity: 0;
+  transition: 1s;
+}
+
+.animate.show {
+  opacity: 1;
+}
+
+*/
